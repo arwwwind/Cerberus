@@ -1,14 +1,21 @@
-# Turborepo starter
+# Cerberus
 
 This is an official starter Turborepo.
 
-## Using this example
+## Quick Start
 
-Run the following command:
+Run the following command in the root and all the apps in /apps:
 
 ```sh
-npx create-turbo@latest
+npm i
 ```
+Once required dependencies are installed. From the root of the application run.
+
+```sh
+npm run dev
+```
+
+- Make sure you have set .env variables correctly.
 
 ## What's inside?
 
@@ -16,21 +23,10 @@ This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- `frontend`: a [React.js](https://react.dev/) app
+- `backend`: [Nest.js](https://nestjs.com/) app
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
 
 ### Build
 
@@ -38,7 +34,7 @@ To build all apps and packages, run the following command:
 
 ```
 cd my-turborepo
-pnpm build
+npm build
 ```
 
 ### Develop
@@ -47,7 +43,7 @@ To develop all apps and packages, run the following command:
 
 ```
 cd my-turborepo
-pnpm dev
+npm dev
 ```
 
 ### Remote Caching
