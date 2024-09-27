@@ -1,13 +1,16 @@
 {
-  "name": "Cerberus",
+  "name": "cerberus",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "dev": "concurrently \"npm run frontend:dev\" \"npm run backend:dev\"",
+    "build": "turbo run build",
+    "frontend:dev": "cd apps/frontend && vite",
+    "backend:dev": "cd apps/backend && nest start --watch",
+    "frontend:build": "cd apps/frontend && vite build",
+    "backend:build": "cd apps/backend && nest build"
   },
   "devDependencies": {
+    "concurrently": "^9.0.1",
     "prettier": "^3.2.5",
     "turbo": "^2.1.2",
     "typescript": "^5.4.5"
